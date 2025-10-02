@@ -299,3 +299,227 @@ body {
     margin-top: 50px;
     /* Отступ сверху */
 }
+
+/*dsaaaaaaaaaafdhfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff*/
+
+/* ===== ОБЩИЕ СТИЛИ ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Общие стили для заголовков */
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
+/* Общие стили для навигации */
+nav {
+    background: #f4f4f4;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+/* Общие стили для футера */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    color: #666;
+}
+
+/* ===== СТИЛИ ДЛЯ NEWS.HTML ===== */
+.news-page {
+    background-color: #f0f8ff;
+}
+
+.news-page h1 {
+    color: #2c3e50;
+}
+
+.news-page nav a[href="news.html"] {
+    background-color: #3498db;
+    color: white;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+article {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-left: 5px solid #3498db;
+}
+
+article h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+article p:first-of-type {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+article p:last-of-type {
+    color: #34495e;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* ===== СТИЛИ ДЛЯ GOODS.HTML ===== */
+.goods-page {
+    background-color: #fffaf0;
+}
+
+.goods-page h1 {
+    color: #e67e22;
+}
+
+.goods-page nav a[href="goods.html"] {
+    background-color: #e67e22;
+    color: white;
+}
+
+.goods-page main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.goods-page main > div {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 2px solid #f39c12;
+    transition: transform 0.3s;
+}
+
+.goods-page main > div:hover {
+    transform: translateY(-5px);
+}
+
+.goods-page img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #f39c12;
+}
+
+.goods-page h3 {
+    color: #e67e22;
+    margin: 15px 0;
+    font-size: 1.3em;
+}
+
+.goods-page p {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* ===== СТИЛИ ДЛЯ CONTACTS.HTML ===== */
+.contacts-page {
+    background-color: #f0fff0;
+}
+
+.contacts-page h1 {
+    color: #27ae60;
+}
+
+.contacts-page nav a[href="contacts.html"] {
+    background-color: #27ae60;
+    color: white;
+}
+
+.contacts-page main {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    border: 3px solid #27ae60;
+}
+
+.contacts-page p {
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #2c3e50;
+    line-height: 1.8;
+}
+
+.contacts-page p:first-of-type {
+    color: #2980b9;
+    font-weight: bold;
+}
+
+.contacts-page p:nth-of-type(2) {
+    color: #8e44ad;
+    font-style: italic;
+}
+
+.contacts-page button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.contacts-page button:hover {
+    background: #219a52;
+    transform: scale(1.05);
+}

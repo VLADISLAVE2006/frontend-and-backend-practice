@@ -5,13 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Семестровая работа</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/styles.css">
 </head>
 
 <body>
+    <!-- Изменение: Заменили div на семантические теги -->
     <div class="page-container">
-        <div class="header">Супер-пупер сайт</div>
-        <div class="nav">
+        <header class="header"> <!-- Было: <div class="header"> -->
+            <h1>Супер-пупер сайт</h1> <!-- Добавили заголовок для семантики -->
+        </header>
+        <nav class="nav"> <!-- Было: <div class="nav"> -->
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
@@ -19,44 +22,54 @@
                 <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
                 <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
             </ul>
-        </div>
-        <div class="content">
-            <div class="profile-header">
+        </nav>
+        <main class="content"> <!-- Было: <div class="content"> -->
+            <article class="profile-header"> <!-- Было: <div class="profileheader"> -->
                 <h1 class="profile-title">Информация об авторе</h1>
                 <img class="profile-photo" src="images/photo.png" alt="Фото
 автора">
                 <h2 class="profile-name">Иванов Владислав Даниилович</h2>
                 <p class="profile-group">ЭФБО-05-24</p>
-            </div>
+            </article>
 
-            <div class="about-me">
-                <p>Обо мне: Я родился в Москве в 2006 г. В 2023 создал с другом СТРАЙКБОЛЬНУЮ команду О.С.П.К (отряд специалистов по контрразведке). Если захотите присоединиться, всегда рады новым лицам)). Мой позыной - Уголёк</p>
-            </div>
+            <section class="about-me"> <!-- Было: <div class="about-me"> -->
+                <h2>Обо мне</h2> <!-- Добавили заголовок для семантики -->
+                <p>Обо мне: Я родился в Москве в 2006 г. В 2023 создал с другом СТРАЙКБОЛЬНУЮ команду О.С.П.К (отряд специалистов по контрразведке). Если захотите присоединиться, всегда рады новым лицам. Мой позыной - Уголёк</p>
+            </section>
 
-            <div class="skills-container">
-                <div class="skill-tag">Навык 1</div>
-                <div class="skill-tag">Навык 2</div>
-                <div class="skill-tag">Навык 3</div>
-                <div class="skill-tag">Навык 4</div>
-            </div>
+            <section class="skills-container"> <!-- Было: <div class="skillscontainer"> -->
+                <h2>Мои навыки</h2> <!-- Добавили заголовок для семантики -->
+                <div class="skills-grid"> <!-- Обертка для Grid -->
+                    <div class="skill-tag">Навык 1</div>
+                    <div class="skill-tag">Навык 2</div>
+                    <div class="skill-tag">Навык 3</div>
+                    <div class="skill-tag">Навык 4</div>
+                </div>
+            </section>
 
-            <div class="experience-section">
+            <section class="experience-section"> <!-- Было: <div
+class="experience-section"> -->
                 <h2 class="section-title">Мой опыт работы</h2>
-                <div class="experience-card">
-                    <h3 class="experience-title">Опыт 1</h3>
-                    <p class="experience-desc">Умею верстать.</p>
+                <div class="experience-grid"> <!-- Обертка для Grid -->
+                    <article class="experience-card"> <!-- Было: <div
+class="experience-card"> -->
+                        <h3 class="experience-title">Опыт 1</h3>
+                        <p class="experience-desc">Умею верстать.</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-title">Опыт 2</h3>
+                        <p class="experience-desc">Умею прогать на c++.</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-title">Опыт 3</h3>
+                        <p class="experience-desc">Умею прогать на 1C.</p>
+                    </article>
                 </div>
-                <div class="experience-card">
-                    <h3 class="experience-title">Опыт 2</h3>
-                    <p class="experience-desc">Умею прогать на c++.</p>
-                </div>
-                <div class="experience-card">
-                    <h3 class="experience-title">Опыт 3</h3>
-                    <p class="experience-desc">Умею прогать на 1C.</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer">Футер</div>
+            </section>
+        </main>
+        <footer class="footer"> <!-- Было: <div class="footer"> -->
+            <p>Футер</p> <!-- Добавили параграф для семантики -->
+        </footer>
     </div>
 </body>
 

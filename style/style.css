@@ -310,6 +310,175 @@ main.content {
     box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
 }
 
+/* ===== СТИЛИ ДЛЯ NEWS.HTML ===== */
+/* Стили для новостей применяются ко всем страницам, но переопределяются ниже */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+article {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+article h2 {
+    margin-bottom: 10px;
+    font-size: 1.4em;
+}
+
+/* Специфичные стили для каждой страницы через селекторы по содержанию */
+
+/* News.html - синяя тема */
+body:has(nav a[href="news.html"]) {
+    background-color: #f0f8ff;
+}
+
+body:has(nav a[href="news.html"]) h1 {
+    color: #2c3e50;
+}
+
+body:has(nav a[href="news.html"]) nav a[href="news.html"] {
+    background-color: #3498db;
+    color: white;
+}
+
+body:has(nav a[href="news.html"]) article {
+    border-left: 5px solid #3498db;
+}
+
+body:has(nav a[href="news.html"]) article h2 {
+    color: #2c3e50;
+}
+
+body:has(nav a[href="news.html"]) article p:first-of-type {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+/* ===== СТИЛИ ДЛЯ GOODS.HTML ===== */
+/* Goods.html - оранжевая тема */
+body:has(nav a[href="goods.html"]) {
+    background-color: #fffaf0;
+}
+
+body:has(nav a[href="goods.html"]) h1 {
+    color: #e67e22;
+}
+
+body:has(nav a[href="goods.html"]) nav a[href="goods.html"] {
+    background-color: #e67e22;
+    color: white;
+}
+
+body:has(nav a[href="goods.html"]) main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+body:has(nav a[href="goods.html"]) main > div {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 2px solid #f39c12;
+    transition: transform 0.3s;
+}
+
+body:has(nav a[href="goods.html"]) main > div:hover {
+    transform: translateY(-5px);
+}
+
+body:has(nav a[href="goods.html"]) img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #f39c12;
+}
+
+body:has(nav a[href="goods.html"]) h3 {
+    color: #e67e22;
+    margin: 15px 0;
+    font-size: 1.3em;
+}
+
+body:has(nav a[href="goods.html"]) p {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* ===== СТИЛИ ДЛЯ CONTACTS.HTML ===== */
+/* Contacts.html - зеленая тема */
+body:has(nav a[href="contacts.html"]) {
+    background-color: #f0fff0;
+}
+
+body:has(nav a[href="contacts.html"]) h1 {
+    color: #27ae60;
+}
+
+body:has(nav a[href="contacts.html"]) nav a[href="contacts.html"] {
+    background-color: #27ae60;
+    color: white;
+}
+
+body:has(nav a[href="contacts.html"]) main {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    border: 3px solid #27ae60;
+}
+
+body:has(nav a[href="contacts.html"]) p {
+    margin: 20px 0;
+    font-size: 1.1em;
+    color: #2c3e50;
+    line-height: 1.8;
+}
+
+body:has(nav a[href="contacts.html"]) p:first-of-type {
+    color: #2980b9;
+    font-weight: bold;
+}
+
+body:has(nav a[href="contacts.html"]) p:nth-of-type(2) {
+    color: #8e44ad;
+    font-style: italic;
+}
+
+body:has(nav a[href="contacts.html"]) button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+body:has(nav a[href="contacts.html"]) button:hover {
+    background: #219a52;
+    transform: scale(1.05);
+}
+
 /* ===== ФУТЕР ===== */
 .footer {
     background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);

@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная - Портфолио</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
+<body class="theme--light">
+    <!-- Переключатель темы -->
+    <div class="theme-toggle">
+        <button class="theme-toggle__button" aria-label="Переключить тему">
+            <span class="theme-toggle__icon">🌙</span>
+        </button>
+    </div>
 
-<body>
     <!-- Основной контейнер -->
     <div class="page">
-
         <!-- Шапка -->
         <header class="header">
             <h1 class="header__title">Моё портфолио</h1>
         </header>
+
         <!-- Навигация -->
         <nav class="nav">
             <ul class="nav__list">
@@ -30,13 +35,13 @@
                 </li>
             </ul>
         </nav>
+
         <!-- Основной контент -->
         <main class="main">
-
             <!-- Профиль -->
             <section class="profile">
                 <div class="profile__card">
-                    <img class="profile__photo" src="images/photo.png" alt="Фото">
+                    <img class="profile__photo" src="images/photo.png" alt="Фото профиля" onerror="this.style.display='none'">
                     <div class="profile__info">
                         <h2 class="profile__name">Иванов Владислав</h2>
                         <p class="profile__group">ЭФБО-05-24</p>
@@ -51,7 +56,7 @@
                     <p class="about__text">
                         Обо мне: Я родился в Москве в 2006 г. В 2023 создал с другом СТРАЙКБОЛЬНУЮ команду О.С.П.К 
                         (отряд специалистов по контрразведке). Если захотите присоединиться, всегда рады новым лицам. 
-                        Мой позыной - Уголёк
+                        Мой позывной - Уголёк
                     </p>
                 </div>
             </section>
@@ -76,24 +81,54 @@
             <section class="projects">
                 <h2 class="projects__title">Проекты</h2>
                 <div class="projects__grid">
-                    <div class="project-card">
-                        <h3 class="project-card__title">Личный сайт</h3>
-                        <p class="project-card__desc">Сайт-портфолио на HTML и
-                            CSS</p>
-                    </div>
-                    <div class="project-card">
-                        <h3 class="project-card__title">Тodo приложение</h3>
-                        <p class="project-card__desc">Простое приложение для
-                            задач</p>
-                    </div>
+                    <article class="card">
+                        <div class="card__header">
+                            <h3 class="card__title">Личный сайт</h3>
+                            <span class="card__badge card__badge--new">NEW</span>
+                        </div>
+                        <div class="card__content">
+                            <p class="card__description">Сайт-портфолио на HTML и CSS</p>
+                        </div>
+                        <div class="card__footer">
+                            <button class="card__button">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="card card--discount">
+                        <div class="card__header">
+                            <h3 class="card__title">Тodo приложение</h3>
+                            <span class="card__badge card__badge--discount">-20%</span>
+                        </div>
+                        <div class="card__content">
+                            <p class="card__description">Простое приложение для задач</p>
+                        </div>
+                        <div class="card__footer">
+                            <button class="card__button">Подробнее</button>
+                        </div>
+                    </article>
+
+                    <article class="card card--selected">
+                        <div class="card__header">
+                            <h3 class="card__title">Интернет-магазин</h3>
+                            <span class="card__badge card__badge--popular">Популярный</span>
+                        </div>
+                        <div class="card__content">
+                            <p class="card__description">Полнофункциональный магазин</p>
+                        </div>
+                        <div class="card__footer">
+                            <button class="card__button">Подробнее</button>
+                        </div>
+                    </article>
                 </div>
             </section>
         </main>
+
         <!-- Подвал -->
         <footer class="footer">
             <p class="footer__text">&copy; 2024 Мой сайт</p>
         </footer>
     </div>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>

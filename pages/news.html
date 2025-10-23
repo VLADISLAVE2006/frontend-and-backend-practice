@@ -2,44 +2,99 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Новости</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - Портфолио</title>
     <link rel="stylesheet" href="../style/style.css">
 </head>
-<body>
-    <header>
-        <h1>Хэдер</h1>
-    </header>
+<body class="theme--light">
+    <div class="theme-toggle">
+        <button class="theme-toggle__button" aria-label="Переключить тему">
+            <span class="theme-toggle__icon">🌙</span>
+        </button>
+    </div>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
+    <div class="page">
+        <header class="header">
+            <h1 class="header__title">Новости</h1>
+        </header>
 
-    <main>
-        <article>
-            <h2>Новость 1</h2>
-            <p>25.09.2025 12:00 В. Д. Иванов</p>
-            <p>Текст новости 1. Жёски SWAG</p>
-        </article>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a class="nav__link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
 
-        <article>
-            <h2>Новость 2</h2>
-            <p>25.09.2025 12:00 В. Д. Иванов</p>
-            <p>Текст новости 2. Раздал стиля</p>
-        </article>
+        <main class="main">
+            <section class="news">
+                <h2 class="news__title">Последние новости</h2>
+                <div class="news__list">
+                    <article class="news-item card">
+                        <div class="news-item__header">
+                            <h3 class="news-item__title">Новость 1</h3>
+                            <span class="news-item__badge news-item__badge--hot">HOT</span>
+                        </div>
+                        <div class="news-item__meta">
+                            <time class="news-item__date">25.09.2025 12:00</time>
+                            <span class="news-item__author">В. Д. Иванов</span>
+                        </div>
+                        <div class="news-item__content">
+                            <p class="news-item__text">Текст новости 1. Жёски SWAG</p>
+                        </div>
+                        <div class="news-item__footer">
+                            <button class="news-item__button">Читать далее</button>
+                        </div>
+                    </article>
 
-        <article>
-            <h2>Новость 3</h2>
-            <p>25.09.2025 12:00 В. Д. Иванов</p>
-            <p>Текст новости 3. Мощно наверстал</p>
-        </article>
-    </main>
+                    <article class="news-item card">
+                        <div class="news-item__header">
+                            <h3 class="news-item__title">Новость 2</h3>
+                            <span class="news-item__badge news-item__badge--new">NEW</span>
+                        </div>
+                        <div class="news-item__meta">
+                            <time class="news-item__date">25.09.2025 12:00</time>
+                            <span class="news-item__author">В. Д. Иванов</span>
+                        </div>
+                        <div class="news-item__content">
+                            <p class="news-item__text">Текст новости 2. Раздал стиля</p>
+                        </div>
+                        <div class="news-item__footer">
+                            <button class="news-item__button">Читать далее</button>
+                        </div>
+                    </article>
 
-    <footer>
-        <p>Футер</p>
-    </footer>
+                    <article class="news-item card">
+                        <div class="news-item__header">
+                            <h3 class="news-item__title">Новость 3</h3>
+                            <span class="news-item__badge news-item__badge--new">UPDATED</span>
+                        </div>
+                        <div class="news-item__meta">
+                            <time class="news-item__date">25.09.2025 12:00</time>
+                            <span class="news-item__author">В. Д. Иванов</span>
+                        </div>
+                        <div class="news-item__content">
+                            <p class="news-item__text">Текст новости 3. Мощно наверстал</p>
+                        </div>
+                        <div class="news-item__footer">
+                            <button class="news-item__button">Читать далее</button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__text">&copy; 2025 Мой сайт</p>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
 </body>
 </html>

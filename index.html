@@ -10,10 +10,17 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 
-<body class="bg-light">
+<body class="bg-light theme--light">
+    <!-- Кнопка переключения темы -->
+    <div class="theme-toggle">
+        <button class="theme-toggle-btn" aria-label="Переключить тему" title="Переключить тему">
+            🌙
+        </button>
+    </div>
+
     <div class="container-fluid p-0">
         <!-- Header -->
-        <header class="bg-primary text-white py-4">
+        <header class="bg-info text-white py-4">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col">
@@ -21,14 +28,14 @@
                         <p class="mb-0 opacity-75">Студент разработчик</p>
                     </div>
                     <div class="col-auto">
-                        <span class="badge bg-light text-primary">ЭФБО-05-24</span>
+                        <span class="badge bg-light text-info">ЭФБО-05-24</span>
                     </div>
                 </div>
             </div>
         </header>
 
         <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -77,18 +84,18 @@
                                     style="width: 150px; height: 150px; object-fit: cover;">
                             </div>
                             <div class="col-md-9">
-                                <h2 class="card-title h4 text-primary">Иванов Владислав Даниилович</h2>
+                                <h2 class="card-title h4 text-info">Иванов Владислав Даниилович</h2>
                                 <p class="card-text text-muted mb-2">
-                                    <i class="bi bi-bookmark-check-fill text-primary"></i>
+                                    <i class="bi bi-bookmark-check-fill text-info"></i>
                                     Студент группы ЭФБО-05-24
                                 </p>
                                 <p class="card-text">
                                     ИПТИП, специальность "Фулл-стек разработка"
                                 </p>
                                 <div class="d-flex gap-2 flex-wrap">
-                                    <span class="badge bg-primary">HTML/CSS</span>
+                                    <span class="badge bg-info">HTML/CSS</span>
                                     <span class="badge bg-success">JavaScript</span>
-                                    <span class="badge bg-info">Bootstrap</span>
+                                    <span class="badge bg-primary">Bootstrap</span>
                                     <span class="badge bg-warning">React</span>
                                 </div>
                             </div>
@@ -102,7 +109,7 @@
                 <div class="card shadow-sm">
                     <div class="card-header bg-light">
                         <h3 class="card-title h5 mb-0">
-                            <i class="bi bi-person-circle text-primary"></i>
+                            <i class="bi bi-person-circle text-info"></i>
                             Обо мне
                         </h3>
                     </div>
@@ -124,7 +131,7 @@
                 <div class="card shadow-sm">
                     <div class="card-header bg-light">
                         <h3 class="card-title h5 mb-0">
-                            <i class="bi bi-tools text-primary"></i>
+                            <i class="bi bi-tools text-info"></i>
                             Мои навыки
                         </h3>
                     </div>
@@ -134,16 +141,16 @@
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between mb-1">
                                         <span>HTML/CSS</span>
-                                        <span class="text-primary">90%</span>
+                                        <span class="text-info">90%</span>
                                     </div>
                                     <div class="progress" style="height: 8px;">
-                                        <div class="progress-bar bg-primary" style="width: 90%"></div>
+                                        <div class="progress-bar bg-info" style="width: 90%"></div>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between mb-1">
                                         <span>JavaScript</span>
-                                        <span class="text-primary">75%</span>
+                                        <span class="text-info">75%</span>
                                     </div>
                                     <div class="progress" style="height: 8px;">
                                         <div class="progress-bar bg-success" style="width: 75%"></div>
@@ -154,16 +161,16 @@
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between mb-1">
                                         <span>Bootstrap</span>
-                                        <span class="text-primary">85%</span>
+                                        <span class="text-info">85%</span>
                                     </div>
                                     <div class="progress" style="height: 8px;">
-                                        <div class="progress-bar bg-info" style="width: 85%"></div>
+                                        <div class="progress-bar bg-primary" style="width: 85%"></div>
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <div class="d-flex justify-content-between mb-1">
                                         <span>React</span>
-                                        <span class="text-primary">70%</span>
+                                        <span class="text-info">70%</span>
                                     </div>
                                     <div class="progress" style="height: 8px;">
                                         <div class="progress-bar bg-warning" style="width: 70%"></div>
@@ -180,7 +187,7 @@
                 <div class="card shadow-sm">
                     <div class="card-header bg-light">
                         <h3 class="card-title h5 mb-0">
-                            <i class="bi bi-folder-fill text-primary"></i>
+                            <i class="bi bi-folder-fill text-info"></i>
                             Мои проекты
                         </h3>
                     </div>
@@ -196,9 +203,9 @@
                                             Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.
                                         </p>
                                         <div class="mb-2">
-                                            <span class="badge bg-primary">HTML</span>
-                                            <span class="badge bg-primary">CSS</span>
-                                            <span class="badge bg-primary">Bootstrap</span>
+                                            <span class="badge bg-info">HTML</span>
+                                            <span class="badge bg-info">CSS</span>
+                                            <span class="badge bg-info">Bootstrap</span>
                                         </div>
                                     </div>
                                 </div>
@@ -229,8 +236,8 @@
                                             Прототип интернет-магазина с корзиной товаров и фильтрацией.
                                         </p>
                                         <div class="mb-2">
-                                            <span class="badge bg-info">React</span>
-                                            <span class="badge bg-info">API</span>
+                                            <span class="badge bg-primary">React</span>
+                                            <span class="badge bg-primary">API</span>
                                         </div>
                                     </div>
                                 </div>

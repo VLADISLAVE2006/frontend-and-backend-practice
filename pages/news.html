@@ -5,103 +5,304 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Новости - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../style/style.css">
 </head>
 
-< class="theme--light">
+<body class="bg-light theme--light">
+    <!-- Кнопка переключения темы -->
     <div class="theme-toggle">
-        <button class="theme-toggle__button" aria-label="Переключить тему">
-            <span class="theme-toggle__icon">🌙</span>
+        <button class="theme-toggle-btn" aria-label="Переключить тему" title="Переключить тему">
+            🌙
         </button>
     </div>
 
-    <div class="page">
-        <header class="header">
-            <h1 class="header__title">Новости</h1>
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Новости</h1>
+                        <p class="mb-0 opacity-75">Последние события и обновления</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">ЭФБО-05-24</span>
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item">
-                    <a class="nav__link" href="../index.html">Главная</a>
-                </li>
-                <li class="nav__item nav__item--active">
-                    <a class="nav__link" href="news.html">Новости</a>
-                </li>
-                <li class="nav__item">
-                    <a class="nav__link" href="contacts.html">Контакты</a>
-                </li>
-                <li class="nav__item nav__item--active">
-                    <a class="nav__link" href="goods.html">Товары</a>
-                </li>
-            </ul>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Практики
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="goods.html">
+                                <i class="bi bi-cart me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
-        <main class="main">
-            <section class="news">
-                <h2 class="news__title">Последние новости</h2>
-                <div class="news__list">
-                    <article class="news-item card">
-                        <div class="news-item__header">
-                            <h3 class="news-item__title">Новость 1</h3>
-                            <span class="news-item__badge news-item__badge--hot">HOT</span>
-                        </div>
-                        <div class="news-item__meta">
-                            <time class="news-item__date">25.09.2025 12:00</time>
-                            <span class="news-item__author">В. Д. Иванов</span>
-                        </div>
-                        <div class="news-item__content">
-                            <p class="news-item__text">Текст новости 1. Жёски SWAG</p>
-                        </div>
-                        <div class="news-item__footer">
-                            <button class="news-item__button">Читать далее</button>
-                        </div>
-                    </article>
+        <!-- Main Content -->
+        <main class="container my-4">
+            <!-- News Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-newspaper text-primary me-2"></i>
+                            Последние новости
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <!-- News 1 -->
+                            <div class="col-12">
+                                <div class="card news-card h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h5 class="card-title text-primary">Новость 1</h5>
+                                            <div class="d-flex gap-2">
+                                                <span class="badge bg-danger">HOT</span>
+                                                <span class="badge bg-warning text-dark">Популярное</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="d-flex flex-wrap gap-3 mb-3 text-muted small">
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-calendar me-2"></i>
+                                                <time>25.09.2025 12:00</time>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-person me-2"></i>
+                                                <span>В. Д. Иванов</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-eye me-2"></i>
+                                                <span>1.2K просмотров</span>
+                                            </div>
+                                        </div>
 
-                    <article class="news-item card">
-                        <div class="news-item__header">
-                            <h3 class="news-item__title">Новость 2</h3>
-                            <span class="news-item__badge news-item__badge--new">NEW</span>
-                        </div>
-                        <div class="news-item__meta">
-                            <time class="news-item__date">25.09.2025 12:00</time>
-                            <span class="news-item__author">В. Д. Иванов</span>
-                        </div>
-                        <div class="news-item__content">
-                            <p class="news-item__text">Текст новости 2. Раздал стиля</p>
-                        </div>
-                        <div class="news-item__footer">
-                            <button class="news-item__button">Читать далее</button>
-                        </div>
-                    </article>
+                                        <div class="news-content mb-4">
+                                            <p class="card-text">
+                                                <strong>Жёски SWAG!</strong> Мы рады сообщить о запуске нового проекта, 
+                                                который изменит представление о веб-разработке. Инновационные технологии 
+                                                и современный подход позволяют создавать продукты высочайшего качества.
+                                            </p>
+                                            <p class="card-text">
+                                                Проект включает в себя передовые решения в области фронтенд разработки 
+                                                и UX/UI дизайна. Мы уверены, что этот продукт найдет отклик у широкой аудитории.
+                                            </p>
+                                        </div>
 
-                    <article class="news-item card">
-                        <div class="news-item__header">
-                            <h3 class="news-item__title">Новость 3</h3>
-                            <span class="news-item__badge news-item__badge--new">UPDATED</span>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="tags">
+                                                <span class="badge bg-light text-dark me-1">#разработка</span>
+                                                <span class="badge bg-light text-dark me-1">#SWAG</span>
+                                                <span class="badge bg-light text-dark">#инновации</span>
+                                            </div>
+                                            <button class="btn btn-outline-primary btn-sm" 
+                                                    onclick="readMore('news1')">
+                                                <i class="bi bi-book me-1"></i>Читать далее
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- News 2 -->
+                            <div class="col-12">
+                                <div class="card news-card h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h5 class="card-title text-primary">Новость 2</h5>
+                                            <div class="d-flex gap-2">
+                                                <span class="badge bg-success">NEW</span>
+                                                <span class="badge bg-info">Обновление</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="d-flex flex-wrap gap-3 mb-3 text-muted small">
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-calendar me-2"></i>
+                                                <time>25.09.2025 12:00</time>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-person me-2"></i>
+                                                <span>В. Д. Иванов</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-eye me-2"></i>
+                                                <span>856 просмотров</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="news-content mb-4">
+                                            <p class="card-text">
+                                                <strong>Раздал стиля!</strong> Представляем вашему вниманию обновление 
+                                                нашего портфолио с совершенно новым дизайном. Мы переработали интерфейс, 
+                                                улучшили пользовательский опыт и добавили множество новых функций.
+                                            </p>
+                                            <p class="card-text">
+                                                Теперь сайт стал более интуитивно понятным и адаптивным. 
+                                                Мы продолжаем работать над улучшением и ждем ваших отзывов!
+                                            </p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="tags">
+                                                <span class="badge bg-light text-dark me-1">#дизайн</span>
+                                                <span class="badge bg-light text-dark me-1">#обновление</span>
+                                                <span class="badge bg-light text-dark">#UX/UI</span>
+                                            </div>
+                                            <button class="btn btn-outline-primary btn-sm" 
+                                                    onclick="readMore('news2')">
+                                                <i class="bi bi-book me-1"></i>Читать далее
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- News 3 -->
+                            <div class="col-12">
+                                <div class="card news-card h-100">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-start mb-3">
+                                            <h5 class="card-title text-primary">Новость 3</h5>
+                                            <div class="d-flex gap-2">
+                                                <span class="badge bg-info">UPDATED</span>
+                                                <span class="badge bg-secondary">Технологии</span>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="d-flex flex-wrap gap-3 mb-3 text-muted small">
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-calendar me-2"></i>
+                                                <time>25.09.2025 12:00</time>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-person me-2"></i>
+                                                <span>В. Д. Иванов</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <i class="bi bi-eye me-2"></i>
+                                                <span>642 просмотра</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="news-content mb-4">
+                                            <p class="card-text">
+                                                <strong>Мощно наверстал!</strong> Завершена работа над масштабным проектом 
+                                                по созданию системы управления контентом. Проект включает в себя современный 
+                                                стек технологий и обеспечивает высокую производительность.
+                                            </p>
+                                            <p class="card-text">
+                                                Мы реализовали сложный функционал, включая систему прав доступа, 
+                                                аналитику и интеграцию с внешними сервисами. Результат превзошел ожидания!
+                                            </p>
+                                        </div>
+
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="tags">
+                                                <span class="badge bg-light text-dark me-1">#проект</span>
+                                                <span class="badge bg-light text-dark me-1">#технологии</span>
+                                                <span class="badge bg-light text-dark">#успех</span>
+                                            </div>
+                                            <button class="btn btn-outline-primary btn-sm" 
+                                                    onclick="readMore('news3')">
+                                                <i class="bi bi-book me-1"></i>Читать далее
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="news-item__meta">
-                            <time class="news-item__date">25.09.2025 12:00</time>
-                            <span class="news-item__author">В. Д. Иванов</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm bg-primary text-white">
+                    <div class="card-body text-center py-5">
+                        <h4 class="card-title mb-3">
+                            <i class="bi bi-envelope-check me-2"></i>
+                            Подпишитесь на рассылку
+                        </h4>
+                        <p class="card-text mb-4 opacity-75">
+                            Будьте в курсе последних новостей и обновлений. Получайте уведомления о новых проектах и событиях.
+                        </p>
+                        <div class="row justify-content-center">
+                            <div class="col-md-6">
+                                <div class="input-group">
+                                    <input type="email" class="form-control" placeholder="Ваш email" 
+                                           aria-label="Ваш email">
+                                    <button class="btn btn-light" type="button">
+                                        <i class="bi bi-send me-1"></i>Подписаться
+                                    </button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="news-item__content">
-                            <p class="news-item__text">Текст новости 3. Мощно наверстал</p>
-                        </div>
-                        <div class="news-item__footer">
-                            <button class="news-item__button">Читать далее</button>
-                        </div>
-                    </article>
+                    </div>
                 </div>
             </section>
         </main>
 
-        <footer class="footer">
-            <p class="footer__text">&copy; 2025 Мой сайт</p>
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 Портфолио студента. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
-    <!-- Кнопка переключения темы -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../script.js"></script>
-    </body>
+    
+    <script>
+        function readMore(newsId) {
+            alert(`Открывается полная версия новости: ${newsId}`);
+            // Здесь можно добавить логику для открытия полной новости
+        }
+    </script>
+</body>
 
 </html>

@@ -3,58 +3,243 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Товары</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - Портфолио</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../style/style.css">
 </head>
 
-<>
-    <header>
-        <h1>Хэдер</h1>
-    </header>
-
-    <nav>
-        <ul>
-            <li><a href="../index.html">Главная</a></li>
-            <li><a href="news.html">Новости</a></li>
-            <li><a href="practices.html">Практики</a></li>
-            <li><a href="goods.html">Товары</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
-
-    <main>
-        <div>
-            <img src="../images/goods1.jpg" alt="Товар 1">
-            <h3>Артём Дотович</h3>
-            <p>Цена товара: бесценно</p>
-        </div>
-
-        <div>
-            <img src="../images/goods2.jpg" alt="Товар 2">
-            <h3>Владислав Чёрный</h3>
-            <p>Цена товара: бесценно</p>
-        </div>
-
-        <div>
-            <img src="../images/goods3.jpg" alt="Товар 3">
-            <h3>Константин Скебобов</h3>
-            <p>Цена товара: бесценно</p>
-        </div>
-    </main>
-
-    <footer>
-        <p>Футер</p>
-    </footer>
-        
-        <!-- Кнопка переключения темы -->
+<body class="bg-light theme--light">
+    <!-- Кнопка переключения темы -->
     <div class="theme-toggle">
         <button class="theme-toggle-btn" aria-label="Переключить тему" title="Переключить тему">
             🌙
         </button>
     </div>
 
-    <script src="../script.js"></script>
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">Товары</h1>
+                        <p class="mb-0 opacity-75">Эксклюзивные предложения</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">ЭФБО-05-24</span>
+                    </div>
+                </div>
+            </div>
+        </header>
 
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Практики
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="goods.html">
+                                <i class="bi bi-cart me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container my-4">
+            <!-- Products Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-cart-check text-primary me-2"></i>
+                            Наши эксклюзивные товары
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <!-- Product 1 -->
+                            <div class="col-md-4">
+                                <div class="card h-100 product-card">
+                                    <img src="../images/goods1.jpg" class="card-img-top" alt="Артём Дотович" 
+                                         style="height: 250px; object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <h5 class="card-title text-primary">Артём Дотович</h5>
+                                            <span class="badge bg-warning text-dark">Эксклюзив</span>
+                                        </div>
+                                        <p class="card-text flex-grow-1">
+                                            Уникальный специалист с невероятными навыками в разработке. 
+                                            Идеальный выбор для сложных проектов.
+                                        </p>
+                                        <div class="mt-auto">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="h5 text-success mb-0">Бесценно</span>
+                                                <span class="badge bg-success">В наличии</span>
+                                            </div>
+                                            <button class="btn btn-primary w-100" onclick="addToCart('Артём Дотович')">
+                                                <i class="bi bi-cart-plus me-2"></i>Добавить в корзину
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="col-md-4">
+                                <div class="card h-100 product-card">
+                                    <img src="../images/goods2.jpg" class="card-img-top" alt="Владислав Чёрный" 
+                                         style="height: 250px; object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <h5 class="card-title text-primary">Владислав Чёрный</h5>
+                                            <span class="badge bg-danger">Хит</span>
+                                        </div>
+                                        <p class="card-text flex-grow-1">
+                                            Опытный разработчик с глубокими знаниями в современных технологиях. 
+                                            Гарантированное качество работы.
+                                        </p>
+                                        <div class="mt-auto">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="h5 text-success mb-0">Бесценно</span>
+                                                <span class="badge bg-success">В наличии</span>
+                                            </div>
+                                            <button class="btn btn-primary w-100" onclick="addToCart('Владислав Чёрный')">
+                                                <i class="bi bi-cart-plus me-2"></i>Добавить в корзину
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="col-md-4">
+                                <div class="card h-100 product-card">
+                                    <img src="../images/goods3.jpg" class="card-img-top" alt="Константин Скебобов" 
+                                         style="height: 250px; object-fit: cover;">
+                                    <div class="card-body d-flex flex-column">
+                                        <div class="d-flex justify-content-between align-items-start mb-2">
+                                            <h5 class="card-title text-primary">Константин Скебобов</h5>
+                                            <span class="badge bg-info">Новинка</span>
+                                        </div>
+                                        <p class="card-text flex-grow-1">
+                                            Инновационный подход к решению задач. 
+                                            Создаёт продукты, которые меняют представление о возможном.
+                                        </p>
+                                        <div class="mt-auto">
+                                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                                <span class="h5 text-success mb-0">Бесценно</span>
+                                                <span class="badge bg-success">В наличии</span>
+                                            </div>
+                                            <button class="btn btn-primary w-100" onclick="addToCart('Константин Скебобов')">
+                                                <i class="bi bi-cart-plus me-2"></i>Добавить в корзину
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="mb-5">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-light">
+                        <h3 class="card-title h5 mb-0">
+                            <i class="bi bi-star text-primary me-2"></i>
+                            Почему выбирают нас
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="row g-4">
+                            <div class="col-md-3 text-center">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-shield-check text-primary" style="font-size: 2rem;"></i>
+                                </div>
+                                <h6>Гарантия качества</h6>
+                                <p class="small text-muted">Все товары проходят строгий контроль</p>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-truck text-primary" style="font-size: 2rem;"></i>
+                                </div>
+                                <h6>Быстрая доставка</h6>
+                                <p class="small text-muted">Доставка в течение 24 часов</p>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-headset text-primary" style="font-size: 2rem;"></i>
+                                </div>
+                                <h6>Поддержка 24/7</h6>
+                                <p class="small text-muted">Всегда готовы помочь</p>
+                            </div>
+                            <div class="col-md-3 text-center">
+                                <div class="feature-icon mb-3">
+                                    <i class="bi bi-arrow-repeat text-primary" style="font-size: 2rem;"></i>
+                                </div>
+                                <h6>Легкий возврат</h6>
+                                <p class="small text-muted">Возврат в течение 30 дней</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 Портфолио студента. Все права защищены.</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Политика конфиденциальности</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../script.js"></script>
+    
+    <script>
+        function addToCart(productName) {
+            alert(`Товар "${productName}" добавлен в корзину!`);
+            // Здесь можно добавить логику для работы с корзиной
+        }
+    </script>
 </body>
 
 </html>

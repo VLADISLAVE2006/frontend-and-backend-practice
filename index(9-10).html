@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Портфолио</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="theme--light">
+    <!-- Кнопка переключения темы -->
+    <div class="theme-toggle">
+        <button class="theme-toggle-btn" aria-label="Переключить тему" title="Переключить тему">
+            🌙
+        </button>
+    </div>
+
+    <div class="page-container">
+        <header class="header">
+            <h1>Моё Портфолио</h1>
+            <p class="header__subtitle">Студент разработчик</p>
+            <span class="header__badge">ЭФБО-05-24</span>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item nav-item--active">
+                    <a class="nav-link" href="index.html">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/news.html">Новости</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/practices.html">Практики</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/goods.html">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="pages/contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <!-- Profile Section -->
+            <article class="profile-header">
+                <h2 class="profile-title">Информация об авторе</h2>
+                <img class="profile-photo" src="images/photo.png" alt="Фото автора">
+                <h3 class="profile-name">Иванов Владислав Даниилович</h3>
+                <p class="profile-group">ЭФБО-05-24</p>
+            </article>
+
+            <!-- About Section -->
+            <section class="about-me">
+                <h2>Обо мне</h2>
+                <p>Студент 1 курса с горячей страстью к созданию цифровых продуктов. Начинал с вёрстки 
+                в 16 лет, сейчас углубляюсь в современные фреймворки и принципы проектирования интерфейсов.</p>
+                <p>Верю, что хороший код — это не только работающая программа, но и элегантное решение, 
+                которое приносит радость пользователям. Увлекаюсь психологией интерфейсов и тем, 
+                как технологии могут делать жизнь людей проще и интереснее.</p>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="skills-container">
+                <h2>Мои навыки</h2>
+                <div class="skills-grid">
+                    <div class="skill-tag">HTML/CSS</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">Bootstrap</div>
+                    <div class="skill-tag">React</div>
+                    <div class="skill-tag">UI/UX Design</div>
+                    <div class="skill-tag">Git</div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section class="experience-section">
+                <h2 class="section-title">Мой опыт работы</h2>
+                <div class="experience-grid">
+                    <article class="experience-card">
+                        <h3 class="experience-title">Веб-разработчик</h3>
+                        <p class="experience-desc">Разработка адаптивных сайтов и веб-приложений с использованием современных технологий и фреймворков.</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-title">Frontend разработчик</h3>
+                        <p class="experience-desc">Создание пользовательских интерфейсов с акцентом на UX/UI дизайн и производительность.</p>
+                    </article>
+                    <article class="experience-card">
+                        <h3 class="experience-title">UI/UX дизайнер</h3>
+                        <p class="experience-desc">Проектирование интерфейсов и создание прототипов для улучшения пользовательского опыта.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="projects-section">
+                <h2 class="section-title">Мои проекты</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <img src="images/project1.jpg" alt="Личный сайт" class="project-image">
+                        <h3 class="project-title">Личный сайт</h3>
+                        <p class="project-desc">Сайт-портфолио на HTML, CSS и Bootstrap с адаптивным дизайном.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">Bootstrap</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/project2.jpg" alt="Todo приложение" class="project-image">
+                        <h3 class="project-title">Todo приложение</h3>
+                        <p class="project-desc">Приложение для управления задачами с использованием JavaScript.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">LocalStorage</span>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <img src="images/project3.jpg" alt="Интернет-магазин" class="project-image">
+                        <h3 class="project-title">Интернет-магазин</h3>
+                        <p class="project-desc">Прототип интернет-магазина с корзиной товаров и фильтрацией.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">React</span>
+                            <span class="project-tag">API</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Портфолио студента. Все права защищены.</p>
+            <div class="footer-links">
+                <a href="pages/contacts.html" class="footer-link">Контакты</a>
+                <a href="#" class="footer-link">Политика конфиденциальности</a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости - Портфолио</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body class="theme--light">
+    <!-- Кнопка переключения темы -->
+    <div class="theme-toggle">
+        <button class="theme-toggle-btn" aria-label="Переключить тему" title="Переключить тему">
+            🌙
+        </button>
+    </div>
+
+    <div class="page-container">
+        <header class="header">
+            <h1>Новости</h1>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Главная</a>
+                </li>
+                <li class="nav-item nav-item--active">
+                    <a class="nav-link" href="news.html">Новости</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="practices.html">Практики</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="goods.html">Товары</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="content">
+            <section class="news-container">
+                <h2 class="section-title">Последние новости</h2>
+                
+                <article class="news-card">
+                    <h3 class="news-title">Запуск нового проекта</h3>
+                    <div class="news-meta">
+                        <time datetime="2025-01-01">01.01.2025 12:00</time> | Автор: В. Д. Иванов
+                    </div>
+                    <p class="news-text">Текст новости 1. Новый проект! Мы рады сообщить о запуске нового проекта, который изменит представление о веб-разработке. Инновационные технологии и современный подход позволяют создавать продукты высочайшего качества.</p>
+                    <button class="news-button">Читать далее</button>
+                </article>
+
+                <article class="news-card">
+                    <h3 class="news-title">Обновление дизайна</h3>
+                    <div class="news-meta">
+                        <time datetime="2025-01-01">01.01.2025 12:00</time> | Автор: В. Д. Иванов
+                    </div>
+                    <p class="news-text">Текст новости 2. Обновление портфолио! Представляем вашему вниманию обновление нашего портфолио с совершенно новым дизайном. Мы переработали интерфейс, улучшили пользовательский опыт и добавили множество новых функций.</p>
+                    <button class="news-button">Читать далее</button>
+                </article>
+
+                <article class="news-card">
+                    <h3 class="news-title">Завершение масштабного проекта</h3>
+                    <div class="news-meta">
+                        <time datetime="2025-01-01">01.01.2025 12:00</time> | Автор: В. Д. Иванов
+                    </div>
+                    <p class="news-text">Текст новости 3. Проект завершён! Завершена работа над масштабным проектом по созданию системы управления контентом. Проект включает в себя современный стек технологий и обеспечивает высокую производительность.</p>
+                    <button class="news-button">Читать далее</button>
+                </article>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Новостной портал</p>
+        </footer>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+
+</html>
